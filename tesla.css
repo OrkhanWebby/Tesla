@@ -1,0 +1,602 @@
+@font-face {
+    font-family: 'Tesla';
+    src: url(./GothamSSm-Book_Web.woff2);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Tesla';
+
+}
+
+/*  */
+/*  */
+/* This area is for the background images */
+/*  */
+/*  */
+#blue-car {
+    background-image: url(./blue\ car.jpeg);
+    background-position: center;
+    background-size: cover;
+    
+}
+
+#red-car1 {
+    background-image: url(./redcar1.jpeg);
+    background-position: center;
+    background-size: cover;
+}
+
+#red-car2 {
+    background-image: url(./redcar2.jpeg);
+    background-position: center;
+    background-size: cover;
+}
+
+#white-car {
+    background-image: url(./whitecar.jpeg);
+    background-position: center;
+    background-size: cover;
+}
+
+#house1 {
+    background-image: url(./house1.jpeg);
+    background-position: center;
+    background-size: cover;
+}
+
+#house2 {
+    background-image: url(./house2.webp);
+    background-position: center;
+    background-size: cover;
+}
+
+#bluetooth {
+    background-image: url(./bluetooth.jpeg);
+    background-position: center;
+    background-size: cover;
+}
+
+section {
+    height: 100vh;
+    scroll-snap-align: center;
+}
+
+html {
+    scroll-snap-type: y mandatory ;
+    scroll-behavior: smooth;
+}
+
+/*  */
+/*  */
+/* This area is for the checkbox */
+/*  */
+/*  */
+section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: cadetblue; */
+}
+
+nav {
+    position: fixed;
+    right: -311px;
+    top: 0;
+    background-color: white;
+    width: 311px;
+    height: 100%;
+    transition: right .3s, opacity 2s;
+    opacity: 0;
+    padding: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+
+/* when checkbox is checked, change nav element */
+#open_menu_checkbox:checked ~ nav {
+    right: 0;
+    opacity: 1;
+}
+
+header {
+    position: fixed;
+    /* width: 100%;
+    height: 8rem; */
+    top: 0;
+    left: 0;
+    right: 0;
+    /* left and right 0 are 
+    used for spreading the element 
+    alomgside of the body */
+    color: white;
+    /* outline: red solid 3px; */
+    height: 80px;
+}
+
+#open_menu_checkbox {
+    display: none;
+}
+
+nav label {
+    font-size: 1.5rem;
+    margin-left: 90%;
+}
+
+#blur_overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    pointer-events: none;
+    backdrop-filter: blur(3px);
+    opacity: 0;
+    transition: .3s;
+}
+
+#open_menu_checkbox:checked ~ #blur_overlay {
+    opacity: 1;
+    pointer-events: all;
+}
+
+/*  */
+/*  */
+/* The area for header */
+/*  */
+/*  */
+
+#teslaLogo {
+    width: 120px;
+    height: 24px;
+    color: black;
+}
+
+
+
+.models a{
+    text-decoration: none;
+    color: black;
+    /* margin-left: 5px; */
+    padding: 5px 20px;
+
+}
+
+.models a:hover {
+    background-color: rgba(204, 203, 203, 0.3);
+    border-radius: 5px;
+}
+
+.shop-account a {
+    text-decoration: none;
+}
+
+.shop-account a:hover {
+    background-color: rgba(204, 203, 203, 0.3);
+    border-radius: 10px;
+
+}
+
+
+.shop-account a, label{
+    color: black;
+    /* margin-right: 15px; */
+    padding: 5px 20px;
+
+
+}
+
+.shop-account label:hover {
+    background-color: rgba(204, 203, 203, 0.3);
+    border-radius: 10px;
+
+}
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/*  */
+/*  */
+/* This area is for the text */
+/*  */
+/*  */
+
+.blue-car-text {
+    max-width: 700px;
+    max-height: 600px;
+    height: 92%;
+    /* outline: red 5px solid; */
+    flex-direction: column;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;    
+    padding: 50px;
+}
+
+.red-car1-text {
+    max-width: 700px;
+    max-height: 600px;
+    height: 92%;
+    /* outline: red 5px solid; */
+    flex-direction: column;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;    
+    padding: 50px;
+}
+
+.red-car2-text {
+    max-width: 700px;
+    max-height: 600px;
+    height: 92%;
+    /* outline: red 5px solid; */
+    flex-direction: column;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;    
+    padding: 50px;
+}
+
+.white-car-text {
+    max-width: 700px;
+    max-height: 600px;
+    height: 92%;
+    /* outline: red 5px solid; */
+    flex-direction: column;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;    
+    padding: 50px;
+}
+
+.house1-text {
+    max-width: 700px;
+    max-height: 600px;
+    height: 92%;
+    /* outline: red 5px solid; */
+    flex-direction: column;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;    
+    padding: 50px;
+}
+
+.house2-text {
+    max-width: 700px;
+    max-height: 600px;
+    height: 92%;
+    /* outline: red 5px solid; */
+    flex-direction: column;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;    
+    padding: 50px;
+}
+
+.bluetooth-text {
+    max-width: 700px;
+    max-height: 600px;
+    height: 92%;
+    /* outline: red 5px solid; */
+    flex-direction: column;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;    
+    padding: 50px;
+}
+
+.fa-light.fa-arrow-down-to-line {
+    color: black;
+    font-size: 40px;
+}
+
+.button1 {
+    background-color: black;
+    color: white;
+    height: 40px;
+    width: 264px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+    opacity: 0.7;
+}
+
+.button2 {
+    background-color: white;
+    color: black;
+    height: 40px;
+    width: 264px;
+    border: none;
+    border-radius: 5px;
+    opacity: 0.7;
+}
+
+.button1_alone {
+    background-color: black;
+    color: white;
+    height: 40px;
+    width: 264px;
+    border: none;
+    border-radius: 5px;
+    /* margin-right: 100px; */
+    margin-top: 400px;
+    opacity: 0.7;
+    align-self: baseline;
+}
+
+
+/*  */
+/*  */
+/* This area for checkbox */
+/*  */
+/*  */
+
+.options {
+    /* height: 100%; */
+    flex-direction: column;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.options a{
+    color: black;
+    font-size: 15px;
+    text-decoration: none;
+    gap: 20px;
+    padding: 10px;
+}
+
+.options a:hover {
+    background-color: rgba(204, 203, 203, 0.3);
+    border-radius: 10px;
+    transition: .8s;
+
+}
+
+
+.usa {
+    display: flex;
+    font-size: 15px;
+    padding: 10px;
+    margin-left: 25px;
+
+}
+
+.usa:hover {
+    background-color: rgba(204, 203, 203, 0.3);
+    border-radius: 10px;
+    transition: .8s;
+
+    
+}
+
+span:hover {
+    text-decoration: underline;
+    cursor: pointer;
+
+}
+
+li {
+    margin-bottom: 15px;
+    margin-left: -70px;
+    font-size: 20px;
+}
+
+
+
+/* For the arrow */
+.arrow {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+
+footer a{
+
+    text-decoration: none;
+    color: black;
+    margin-left: 5px;
+    font-size: 12px;
+    margin-top: -90px;
+
+
+}
+
+
+#view-inventory a {
+    text-decoration: none;
+    border-bottom: 1px solid black;
+
+}
+
+#view-inventory a:hover {
+    border-bottom: 3px solid black;
+    /* text-decoration-thickness: 2px; */
+    transition: .8s;
+}
+
+
+/*  */
+/*  This are is for animation #*/
+/*  */
+.fa-solid.fa-chevron-down {
+    animation: bounce 1.8s infinite ease-in-out;
+}
+
+#view-inventory > h1 {
+    animation: model-y-fade 3s, model-bounce 2s;
+}
+
+#special {
+    opacity: 0;
+    animation: model-y-fade 3s 1s forwards, view-bounce 2s 1s;
+}
+
+
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    30% {
+        transform: translateY(10px);
+    }
+    50% {
+        transform: translateY(0);
+    }
+    65% {
+        transform: translateY(7px);
+    }
+    80% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes model-y-fade {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+@keyframes model-bounce {
+    0% {
+        transform: translateY(50px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+  
+}
+
+@keyframes view-bounce {
+    0% {
+        transform: translateY(60px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+#right-button {
+    opacity: 0;
+    animation: button-fade 3s 1s forwards, rigth-button-bounce 2s 1s;
+}
+
+#left-button {
+    opacity: 0;
+    animation: button-fade 3s 1s forwards, left-button-bounce 2s 1s;
+}
+.for-buttons-and-arrow {
+    width: 100%;
+
+}
+/* .left-right-button {
+    width: 90%;
+} */
+
+@keyframes button-fade {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes rigth-button-bounce {
+    0% {
+        transform: translateX(60px);
+    }
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+@keyframes left-button-bounce {
+    0% {
+        transform: translateX(-60px);
+    }
+    100% {
+        transform: translateX(0px);
+    }
+}
+#model_ {
+    display: none;
+}
+@media screen and (max-width: 1200px) {
+    .models{
+        display: none;
+    }
+    #model_{
+        display: block;
+    }
+}
+
+@media screen and (max-width:1200px) {
+    .shop-account a{
+        display: none;
+    }
+    .shop-account{
+        /* display: flex; */
+        justify-content: space-between;
+    }
+    .shop-account label{
+        padding: 5px 15px;
+        background-color: rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+    }
+}
+
+@media screen and (max-width:644px) {
+    .left-right-button {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        /* width: 90%; */
+    }
+    .button1, .button2{
+        width: 90%;
+    }
+    .button2{
+        margin-left: 0;
+    }
+} 
+@media screen and (max-width:644px){
+    .for-buttons-and-arrow{
+        /* width: 700px; */
+    }
+}
+@media screen and (max-width:645px) {
+    #blue-car{
+        background-image: url(./mobile-blue-car.jpeg);
+        background-size: co;
+        background-position: center;
+    }
+    
+}
+
+
+/* @media screen and (max-width:600){
+    .button1, .button2{
+        width: 100%;
+    }
+} */
